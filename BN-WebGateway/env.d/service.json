@@ -1,0 +1,7 @@
+{
+    "SERVICE_ID": "bn-gateway",
+    "SERVICE_NAME": "BN-Gateway",
+    "SERVICE_TAGS": ["GATEWAY"],
+    "ENV": "DEVELOPMENT",
+    "PORT": 8080
+}

@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- 6
+before_cache:
+  - npm prune
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+  slack: rocketspacer:xdoIoWNTus33Z49ZzBXHuzCI
+services:
+  - mongodb
