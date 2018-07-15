@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - 6
+before_script:
+  - npm install -g gulp-cli
+script:
+  - gulp build
+before_cache:
+  - npm prune
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+  slack: rocketspacer:xdoIoWNTus33Z49ZzBXHuzCI#bloggernation
+deploy:
+  provider: s3
+  access_key_id: AKIAIJHVHKZTWM6LHQJA
+  secret_access_key:
+    secure: eELM5/+o5zrIrDjk2eMmtQHOHjyAp2+aCS5PvmFaw4q1Ut7Wv7oKycHRptgw3ToAMkZvZEhEOn28C8XfKcSHX8FKW3uaOwEiTeCJkV5YPjgdTJLzPEi1wNuoTQilTkt2SzVo4PLoRGuKfp6/LM7bNc0nKr/3luRp82VZ3EkjiPJjuoIMrxwrL/VoC3pDJD4UKUW1EO2V5KHTontc2F0t2qrVZS5RpFwpVI0YYyeEn7w0VER5CV7JcBWM2I5rn2YGnh/IYAqZE0SmL0hSu3f+hQjozOEcUrN0mVgFEsTDdLB43Jzxa2r0udAzlTsr55pEp3W3jkO0WUSzmHEso8KJcpbWqXfKObQD+fFkLKk9Gbkd3WCWYrcTrEK6I1SPH44x2f4Uzd1XkfzJ5bp51QO33M3djH5DsltyGVnnEr2EXi7VVl0x8ya8oYMJ9+/nb/xGsX5yFfUkHUV6egeEgS2JTgrtYNG77GJWhfJbsHEzzdPbHoQFvJHWt4tyqh0LstYTLogqWUdbnguIxUvD93dD8Lr/hjdcRAMSAQ0QwLqfMioXl6zxsiOjz9ql1jAsdmjDA26FKfpsNjIJy+JPPmg4kRL4JKvv8Zl+EWbm6D1wh2aO8DCxMICaYOQURIU3BW6qiRYbqvqNxZu6PK9/GTcqOuJjfuhwru5RwOEyxabOtVY=
+  region: ap-southeast-1
+  bucket: bloggernation.nmtuan.me
+  skip_cleanup: true
+  local-dir: build
+  on:
+    repo: rocketspacer/BN-WebClient
+    branch: master

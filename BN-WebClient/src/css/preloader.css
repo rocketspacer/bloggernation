@@ -1,0 +1,16 @@
+#preloader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../images/preloader.gif') center no-repeat #fff;
+
+	opacity: 0.8;
+	transition: all ease-out 0.5s;
+}
+
+#preloader.ng-hide {
+  opacity: 0;
+}

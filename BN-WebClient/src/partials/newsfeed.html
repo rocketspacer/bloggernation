@@ -1,0 +1,37 @@
+<div class="view container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="widget-area no-padding blank">
+                <div class="status-upload">
+                    <form ng-submit="createPost()">
+                        <textarea ng-model="postContent" placeholder="What are you doing right now?"></textarea>
+                        <ul>
+                            <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
+                            <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
+                            <li>
+                                <a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a>
+                            </li>
+                            <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
+                        </ul>
+                        <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h3 ng-show="newsfeed.length">Recent posts</h3>
+            <div class="panel panel-info" style="margin-top: 15px" ng-repeat="post in newsfeed">
+<div class="panel-heading">
+    <h3 class="panel-title">{{post.author}}</h3>
+</div>
+<div class="panel-body">
+    {{post.content}}
+</div>
+</div>
+</div>
+</div>
+</div>

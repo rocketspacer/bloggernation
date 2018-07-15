@@ -1,0 +1,35 @@
+<div class="view" style="background-color: #f9f9f9">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <img class="center-block"width="64" src="images/quill-gray.png" alt="">
+                <h1 class="auth-form-header">Login to Blogger Nation</h1>
+                <form class="center-block auth-form" ng-submit="loginLocal()">
+                    <div ng-class="{'form-group': true, 'has-error': error.username != false}" style="text-align: left">
+                        <label for="username">Username or email</label>
+                        <input type="text" class="form-control" name="username" ng-model="input.username" required>
+                        <span ng-show="error.username" class="help-block">{{helpText.username}}</span>
+                    </div>
+                    <div ng-class="{'form-group': true, 'has-error': error.password != false}">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" ng-model="input.password" required>
+                        <span ng-show="error.password" class="help-block">{{helpText.password}}</span>                      
+                    </div>
+                    <button class="btn btn-info" style="width: 100%" type="submit">Login</button>
+                    <p class="sep-text">Or login with</p>
+                    <a href="/api/auth/facebook" target="_self" class="btn btn-block btn-social btn-facebook" style="width: 49%">
+                        <span class="fa fa-facebook"></span> Facebook
+                    </a>
+                    <span style="width: 2%"></span>
+                    <a class="btn btn-block btn-social btn-google" style="width: 49%">
+                        <span class="fa fa-google"></span> Google
+                    </a>           
+                </form>
+                <div class="auth-form" style="background-color: transparent">
+                    New to Blogger Nation? <a ui-sref="preauth.signup">Create an account.</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

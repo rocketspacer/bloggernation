@@ -1,0 +1,25 @@
+.sep-text {
+    overflow: hidden;
+    text-align: center;
+    color: gray;
+    padding-top: 14px;
+    padding-bottom: 4px;
+}
+.sep-text:before,
+.sep-text:after {
+    background-color: lightgray;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+.sep-text:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.sep-text:after {
+    left: 0.5em;
+    margin-right: -50%;
+}

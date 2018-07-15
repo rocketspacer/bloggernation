@@ -1,0 +1,26 @@
+/*VIEW PORT UNDER NAVIGATION BAR*/
+.view {
+    padding-top: 90px;
+    padding-bottom: 328px; /*bottom-padding(90) + footer-height(238)*/
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height: 800px) {
+    .view { padding-bottom: 90px; min-height: 70% }
+	footer { position: static }
+}
+
+
+html, body {
+    height: 100%;
+    background: lightgray !important;
+}
+
+.ui-sref-active {
+    color: red !important;
+    background-color: black;
+}

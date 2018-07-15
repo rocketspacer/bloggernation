@@ -1,0 +1,51 @@
+.auth-form {
+    margin: 16px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #d8dee2;
+    background: #fff;
+}
+
+.auth-form-header {
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    font-weight: 300;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.auth-form-big-header {
+    margin-bottom: 24px;
+    text-align: center;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+.auth-form .btn-social {
+    text-align: center; 
+    display: inline-block;
+    margin: 0px;
+}
+
+#signup-logo {
+    width: 480px;
+    height: 480px;
+}
+
+@media (max-width: 915px) {
+    #signup-logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 880px) {
+    .auth-form div[class*="col-"]:nth-child(1) {
+        padding-bottom: 15px;
+    }
+}

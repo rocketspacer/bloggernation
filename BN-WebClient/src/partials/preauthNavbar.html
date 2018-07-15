@@ -1,0 +1,56 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="brand-logo" class="navbar-brand" ui-sref="preauth.landing">
+                <img alt="Blogger Nation" src="images/quill-gray.png">Blogger Nation
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="preauth.about">About</a></li>
+                <li><a ui-sref="preauth.help">Help</a></li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input id="searchbox" type="text" class="form-control" placeholder="Search Blogger Nation">
+                        <span class="input-group-btn">
+                            <button class="btn btn-info" type="button" ui-sref="preauth.search({q: 'gege'})">Search</button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+            <div class="navbar-form navbar-right">
+                <button class="btn btn-default" ui-sref="preauth.login">Sign in</button>
+                <button class="btn btn-primary" ui-sref="preauth.signup">Sign up</button>
+            </div>
+        </div>
+    </div>
+</nav>
+<script>
+    $("a, button", "nav").click(function() {
+        $('.navbar-collapse').collapse('hide');
+    });
+    $(document).click(function(event) { 
+        if(!$(event.target).closest('nav').length) {
+            if($('.navbar-collapse, .collapse, .in').is(":visible")) {
+                $('.navbar-collapse').collapse('hide');
+            }
+        }        
+    });
+    $(document).scroll(function() {
+        if($('.navbar-collapse').is(":visible")) {
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
+</script>
