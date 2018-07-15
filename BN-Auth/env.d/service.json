@@ -1,0 +1,8 @@
+{
+    "SERVICE_ID": "bn-auth",
+    "SERVICE_NAME": "BN-Auth",
+    "SERVICE_TAGS": ["AUTH"],
+    "ENV": "DEVELOPMENT",
+    "PORT": 1331,
+    "DATABASE_URL": "mongodb://admin:123456@ds157268.mlab.com:57268/bn-auth"
+}
