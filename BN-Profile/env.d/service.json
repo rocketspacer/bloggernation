@@ -1,0 +1,8 @@
+{
+    "SERVICE_ID": "bn-profile",
+    "SERVICE_NAME": "BN-Profile",
+    "SERVICE_TAGS": ["PROFILE"],
+    "ENV": "DEVELOPMENT",
+    "PORT": 1330,
+    "DATABASE_URL": "mongodb://localhost/BN-ProfileDB"
+}

@@ -1,0 +1,6 @@
+{
+    "PING_PATH": "/",
+    "PING_INTERVAL": "10s",
+    "PING_TIMEOUT": "4s",
+    "REGISTRY_TIMEOUT": "1m"
+}

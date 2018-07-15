@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- 6
+before_cache:
+  - npm prune
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+  webhooks:
+    - https://webhooks.gitter.im/e/71c62b7d3bf185b766fd
+  on_success: always
+  on_failure: always
+  on_start: always
+services:
+  - mongodb
